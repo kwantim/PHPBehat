@@ -4,7 +4,7 @@ default:
             default_session: selenium2
             base_url: http://en.wikipedia.org           
             selenium2:
-              wd_host: http://localhost:4444/wd/hub
+              wd_host: http://ec2-54-68-231-206.us-west-2.compute.amazonaws.com:4444/wd/hub
               capabilities:
                  version: ''
                  browser: firefox
