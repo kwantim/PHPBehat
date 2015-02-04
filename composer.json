@@ -1,0 +1,14 @@
+{
+    "require-dev": {
+        "phpunit/phpunit":"*",
+        "phpunit/phpunit-selenium":"*",
+        "behat/behat": "2.4.*@stable",
+        "behat/mink": "1.4.*@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-selenium2-driver": "*",
+		"behat/mink-goutte-driver": "*"
+    },
+    "config": {
+            "bin-dir": "bin"
+	}
+}

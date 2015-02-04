@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Set some basic project information and targets -->
+<project name="My Project" default="build">
+ 
+<target name="build"
+   depends="prepare, phpunit, behat"/>  
+   
+<property environment="env"/>
+ 
+ <target name="clean" description="Cleanup build artifacts">  
+ </target>
+ 
+<target name="prepare" depends="clean" description="Prepare for build">  
+  <exec command="php composer.phar install" />
+  <exec command="php composer.phar self-update"/>
+  <exec command="php composer.phar update"/> 
+ </target>
+ 
+ <target name="phpunit">
+  <exec executable="bin/phpunit" failonerror="false">
+        <arg value="Tests"/>
+  </exec>
+ </target>
+ 
+ 
+ <target name="behat" description="Execute the behat tests">        
+    <exec executable="bin/behat" failonerror="false">          
+        <arg value="Tests"/>
+    </exec>
+ </target>
+</project>

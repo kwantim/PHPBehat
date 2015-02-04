@@ -1,0 +1,10 @@
+default:    
+    extensions:
+        Behat\MinkExtension\Extension:
+            default_session: selenium2
+            base_url: http://en.wikipedia.org           
+            selenium2:
+              wd_host: http://localhost:4444/wd/hub
+              capabilities:
+                 version: ''
+                 browser: firefox
